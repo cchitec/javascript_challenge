@@ -27,7 +27,6 @@ ufos.forEach((ufo) => {
    //   var cell = tbody.append("td");
   //  });
  // });
-  
 
 var submit = d3.select("#filter-btn");
 submit.on("click");
