@@ -1,5 +1,5 @@
 // from data.js
-var ufoSightings = data;
+var ufos = data;
 
 // YOUR CODE HERE!
 //Select table body any existing table data
@@ -9,9 +9,9 @@ var tableData = d3.select("table>tbody");
 tableData.html("");
 
 //Append table data
-ufoSightings.forEach((ufoSighting) => {
+ufos.forEach((ufo) => {
     var row = tableData.append("tr");
-    Object.entries(ufosighting).forEach(([key, value]) => {
+    Object.entries(ufo).forEach(([key, value]) => {
         var cell = row.append("td");
         cell.text(value)
     })
@@ -30,7 +30,8 @@ ufoSightings.forEach((ufoSighting) => {
   
 
 var submit = d3.select("#filter-btn");
-submit.on("click",function() {
+submit.on("click");
+function runFilter() {
 
     d3.event.preventDefault();
 
@@ -40,7 +41,7 @@ submit.on("click",function() {
     var inputValue = inputElement.property("value");
 
 //matching the inputted value with that in the stored data
-    var filteredData = ufoSightings.filter(ufoSighting => ufoSighting.datetime === inputValue);
+    var filteredData = ufos.filter(ufo => ufo.datetime === inputValue);
 
 console.log(filteredData);
 
@@ -48,12 +49,13 @@ console.log(filteredData);
 //to clear the webpage output
 tableData.html("");
 
+
 //inputs the filtered data into the table
-filteredData.forEach((ufoSighting) => {
+filteredData.forEach((ufo) => {
     var row = tableData.append("tr");
-    Object.entries(sufoSighting).forEach(([key, value]) => {
+    Object.entries(ufo).forEach(([key, value]) => {
         var cell = row.append("td");
         cell.text(value)
-        })
     })
 });
+}
