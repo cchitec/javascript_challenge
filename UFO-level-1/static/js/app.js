@@ -17,17 +17,6 @@ ufos.forEach((ufo) => {
     })
 });
 
-  //data.forEach(function(Sighting) {
-   // console.log(Sighting);
-   // var row = tbody.append("tr");
-  
-  //  Object.entries(Sighting).forEach(function([key, value]) {
-  //    console.log(key, value);
-   
-   //   var cell = tbody.append("td");
-  //  });
- // });
-
 var submit = d3.select("#filter-btn");
 submit.on("click");
 function runFilter() {
