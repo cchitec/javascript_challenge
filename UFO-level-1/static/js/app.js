@@ -19,7 +19,7 @@ ufos.forEach((ufo) => {
 
 var submit = d3.select("#filter-btn");
 submit.on("click");
-function runFilter() {
+function useFilter() {
 
     d3.event.preventDefault();
 
