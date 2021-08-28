@@ -20,10 +20,10 @@ ufos.forEach((ufo) => {
 var button = d3.select("#filter-btn");
 var form = d3.select("form");
 
-button.on("click", runFilter);
-form.on("submit", runFilter);
+button.on("click", useFilter);
+form.on("submit", useFilter);
 
-function runFilter() {
+function useFilter() {
 
     d3.event.preventDefault();
 
