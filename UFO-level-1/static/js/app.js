@@ -17,9 +17,13 @@ ufos.forEach((ufo) => {
     })
 });
 
-var submit = d3.select("#filter-btn");
-submit.on("click");
-function useFilter() {
+var button = d3.select("#filter-btn");
+var form = d3.select("form");
+
+button.on("click", runFilter);
+form.on("submit", runFilter);
+
+function runFilter() {
 
     d3.event.preventDefault();
 
