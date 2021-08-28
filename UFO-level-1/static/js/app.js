@@ -18,10 +18,7 @@ ufos.forEach((ufo) => {
 });
 
 var button = d3.select("#filter-btn");
-var form = d3.select("form");
-
 button.on("click", useFilter);
-form.on("submit", useFilter);
 
 function useFilter() {
 
